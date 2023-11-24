@@ -91,7 +91,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Foto</th>\
-                        <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '" '+ 'class=popupImage' +'>' : '') + '</td>\
+                        <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['PHOTO']).replace(/[\\\/:]/g, '_').trim() + '" '+ 'class=popupImage' +'>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
