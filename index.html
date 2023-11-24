@@ -71,25 +71,27 @@
         map.addLayer(layer_Positron_0);
         function pop_univ_surabaya_1(feature, layer) {
             var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Nama</th>\
-                        <td>' + (feature.properties['Nama'] !== null ? autolinker.link(feature.properties['Nama'].toLocaleString()) : '') + '</td>\
+                   <tr>\
+                        <td colspan="2">' + (feature.properties['Nama'] !== null ? autolinker.link(feature.properties['Nama'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Kampus</th>\
-                        <td>' + (feature.properties['Kampus'] !== null ? autolinker.link(feature.properties['Kampus'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Kampus'] !== null ? autolinker.link(feature.properties['Kampus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Ranking</strong><br />' + (feature.properties['Desc_QS WUR'] !== null ? autolinker.link(feature.properties['Desc_QS WUR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tracking</th>\
+                        <td>' + (feature.properties['Deskripsi_UnivQS WUR'] !== null ? autolinker.link(feature.properties['Deskripsi_UnivQS WUR'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Tahun Berdiri</strong><br />' + (feature.properties['Desc_Didirikan'] !== null ? autolinker.link(feature.properties['Desc_Didirikan'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tahun_didirikan</th>\
+                        <td>' + (feature.properties['Deskripsi_UnivDidirikan'] !== null ? autolinker.link(feature.properties['Deskripsi_UnivDidirikan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Fakultas</strong><br />' + (feature.properties['Desc_Fakultas'] !== null ? autolinker.link(feature.properties['Desc_Fakultas'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Fakultas</th>\
+                        <td>' + (feature.properties['Deskripsi_UnivFakultas'] !== null ? autolinker.link(feature.properties['Deskripsi_UnivFakultas'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['PHOTO'] !== null ? '<img src="images/' + String(feature.properties['PHOTO']).replace(/[\\\/:]/g, '_').trim() + '"'+ 'class+popupImage' + '' : '>' : '') + '</td>\
+                        <th scope="row">Foto</th>\
+                        <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '" '+ 'class=popupImage' +'>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
